@@ -16,6 +16,9 @@ public class BasicCalculator extends Frame implements MouseListener{
 	private final int ROWS = 6, COLS = 4;
 	private final String BTN_LABELS[] = {"%", "CE", "C" , "DEL", "1/x", "x^2", "x^3", "/", "7", "8", "9", "X", "4", "5", "6", "-", "1", "2", "3", "+","+/-", "0", ".", "="};
 	
+	private int sum = 0;
+	private int disNum1 = 0;
+	private char operation = '\0'; //NULL
 	public BasicCalculator() {
 		this.setTitle("Calculator");
 		this.setSize(300,500);
@@ -28,6 +31,8 @@ public class BasicCalculator extends Frame implements MouseListener{
 		
 //		Add Display section to mainPanel at TOP
 		txtDisplay = new TextField();
+		txtDisplay.setFont(new Font("Calibri", Font.BOLD, 30));
+		txtDisplay.setText(""+disNum1);
 		mainPanel.add(txtDisplay, BorderLayout.NORTH);
 		
 //		Add dash board to the mainPanel at CENTER
@@ -65,78 +70,136 @@ public class BasicCalculator extends Frame implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		Button temp = (Button)e.getSource();
 		if(temp.getLabel() == "%") {
-			
+			operation = '%';
 		}
 		else if(temp.getLabel() == "CE") {
-			
+			operation = 's';
 		}
 		else if(temp.getLabel() == "C") {
-			
+			operation = 'c';
 		}
 		else if(temp.getLabel() == "DEL") {
-			
+			operation = 'd';
 		}
 		else if(temp.getLabel() == "7") {
-			
+			disNum1 = 7;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "8") {
-			
+			disNum1 = 8;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "9") {
-			
+			disNum1 = 9;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "/") {
-			
+			sum = sum / disNum1;
+			operation = '/';
 		}
 		else if(temp.getLabel() == "4") {
-			
+			disNum1 = 4;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "5") {
-			
+			disNum1 = 5;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "6") {
-			
+			disNum1 = 6;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "X") {
-			
+			sum = sum * disNum1;
+			operation = 'X';
 		}
 		else if(temp.getLabel() == "1") {
-			
+			disNum1 = 1;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "2") {
-			
+			disNum1 = 2;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "3") {
-			
+			disNum1 = 3;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == "+") {
-			
+			sum = sum + disNum1;
+			txtDisplay.setText(""+sum);
+			operation = '+';
 		}
 		else if(temp.getLabel() == "+/-") {
 			
 		}
 		else if(temp.getLabel() == "0") {
-			
+			disNum1 = 0;
+			txtDisplay.setText(""+disNum1);
 		}
 		else if(temp.getLabel() == ".") {
 			
 		}
 		else if(temp.getLabel() == "=") {
-			
+			System.out.println("clicked on =");
+			switch(operation) {
+			case '+':
+				System.out.println("= > + running" + sum + "  " + disNum1);
+				sum = sum + disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			case '-':
+				sum -= disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			case 'X':
+				sum *= disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			case '/':
+				sum /= disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			case '%':
+				break;
+			case 's': //clear
+				txtDisplay.setText("");
+				disNum1 = 0;
+				sum = 0;
+				break;
+			case 'c': //clean
+				break;
+			case 'd': //delete
+				break;
+			case '1': //	1/x
+				sum = 1/disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			case '2': //square
+				sum = disNum1 * disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			case '3': //cube
+				sum = disNum1 * disNum1 * disNum1;
+				txtDisplay.setText(""+sum);
+				break;
+			}
+			disNum1 = 0;
 		}
 		else if(temp.getLabel() == "1/x") {
-			
+			operation = '1';
 		}
 		else if(temp.getLabel() == "x^2") {
-			
+			operation = '2';
 		}
 		else if(temp.getLabel() == "x^3") {
-			
+			operation = '3';
 		}
 		else if(temp.getLabel() == "-") {
-			
+			operation = '-';
+			sum = sum - disNum1;
 		}
-		
+	
 	}
 
 	@Override
