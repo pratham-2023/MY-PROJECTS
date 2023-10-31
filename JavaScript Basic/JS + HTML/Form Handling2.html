@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling 2</title>
+</head>
+<body>
+    <form name="f">
+        <label for="txt">Second Method to read the element</label>
+        <input type="text" name="txt" id="txt">
+        <br> <br>
+        <input type="button" value="Show" onclick="second()">
+    </form>
+    <script>
+        function second(){
+            // getElementById() use to access HTML element.
+            let ele = document.getElementById('txt'); // document.f.txt
+            // console.log(ele)
+            ele.value = (ele.value).toUpperCase();
+            // Task 1: Create an HTML form with three input fields, such as red, blue, and 
+            // green. Add change color button with an onclick event.
+            // use rgb() function to change the background color.
+        }
+    </script>
+</body>
+</html>
