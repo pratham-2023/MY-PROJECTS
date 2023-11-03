@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heading One</h1>
+    <h1 class="myCls">Heading Two</h1>
+    <h1>Heading Three</h1>
+    <p class="myCls">This is Para 1</p>
+    <p>This is Para 2</p>
+    <button type="button" onclick="fun()">Click Me</button>
+
+    <script>
+        function fun(){
+            // HTMLCollection : hold the group of elements ie. Array of Elements
+        // document.getElementsByTagName('tagName');
+        // let headingElements = document.getElementsByTagName('h1');
+        // console.log(headingElements) => Will print all the h1 elements as a array of object.
+        // console.log(headingElements[0]); // Will print only first element
+        // headingElements[0].innerText = "You have changed by other" //only change the innerText of first element
+
+        // To change all Elements innerText. DON'T USE
+        // headingElements[0].innerText = "You have changed by other" ;
+        // headingElements[1].innerText = "You have changed by other" ;
+        // headingElements[2].innerText = "You have changed by other" ;
+            
+        // for (element of headingElements){
+        //     element.innerText  = "You have changed by other" ;
+        //     element.style.backgroundColor = 'blue';
+        //     element.style.color = 'white';
+        // }
+
+        //********************************
+        //document.getElementsByClassName('ClassName') : return the collection of HTMLElement with 
+        //given class name.
+        
+        }
+    </script>
+</body>
+</html>

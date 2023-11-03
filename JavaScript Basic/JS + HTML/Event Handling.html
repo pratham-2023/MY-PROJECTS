@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JS</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="data">
+    </form>
+    <script>
+       
+        document.getElementById('data').addEventListener('keyup', function(e){
+            console.log(e.code);
+            if(e.code === 'Space'){
+                console.log('Hello')
+            }
+            // console.log(ele.value.toUpperCase());
+        })
+        // Event Listener function of JS.
+        // let bElem = document.getElementById('myBtn');
+        // bElem.addEventListener("mouseover", function (e){
+        //     //logic
+        //     console.log(e)
+        // } )
+
+        // function myFun(){
+        //     console.log("Hello")
+        // }
+    </script>
+</body>
+</html>

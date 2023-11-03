@@ -27,7 +27,12 @@
               <div class="mb-3">
                 <span class="text-secondary">Password should be of 8 character length.</span>
                 <br>
-                <span class="text-danger" id="warn"></span>
+                <!-- <span class="text-danger" id="warn"></span> -->
+                <ul>
+                    <li id="digitLbl">Contains Digit.</li>
+                    <li id="smallLbl">Contains Small Case.</li>
+                    <li id="capsLbl">Contains Capital Case.</li>
+                </ul>
               </div>
 
             <div class="container text-center  mb-3">
@@ -38,6 +43,27 @@
 
     <script src="assests/bootstrap.min.js"></script>
     <script>
+
+document.getElementById('userPass').addEventListener('keyup', (e)=>{
+    // console.log(e);
+    console.log(e.key);
+    if(e.code === 'Digit0' || e.code === 'Digit1' || e.code === 'Digit2' || e.code === 'Digit3' || e.code === 'Digit4' 
+    || e.code === 'Digit5' || e.code === 'Digit6' || e.code === 'Digit7' || e.code === 'Digit8' || e.code === 'Digit9'){
+                // document.getElementById('warn').innerText = "Contains Digits.";
+                document.getElementById('digitLbl').style.color = 'green';
+                document.getElementById('digitLbl').style.fontWeight = 'bold';
+            }
+    if(e.key >= 'a' && e.key <= 'z'){
+        document.getElementById('smallLbl').style.color = 'green';
+        document.getElementById('smallLbl').style.fontWeight = 'bold';
+    }
+
+    if(e.key >= 'A' && e.key <= 'Z'){
+        document.getElementById('capsLbl').style.color = 'green';
+        document.getElementById('capsLbl').style.fontWeight = 'bold';
+    }
+})
+
         checkLogin = () =>{
             // read
             let uName = document.getElementById('userName').value;
