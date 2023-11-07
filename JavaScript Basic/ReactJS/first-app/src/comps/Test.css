@@ -1,7 +1,20 @@
-.header{
-    background-color: blueviolet;
-}
 
 .text-title{
     color: white;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.tomato{
+    background-color: tomato;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.blue{
+    background-color: blue;
 }
