@@ -2,8 +2,6 @@ import './Test.css';
 
 function Test(props){
 
-    //let stdName = 'Tushar Barewar';
-
     return(
         <div className={props.shirtColor}>
             <h1 className="text-title">
