@@ -1,0 +1,16 @@
+.App-Container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(3, 3, 104);
+}
+
+.App-Title {
+  color: white;
+  text-align: center;
+}
+
+.App-Desc {
+  color: lightcyan;
+  text-align: center;
+}
