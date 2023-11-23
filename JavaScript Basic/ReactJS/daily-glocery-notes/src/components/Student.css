@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+}
+
+.id {
+  color: rgb(0, 115, 255);
+}
+
+.std-name {
+  color: rgb(0, 115, 255);
+}
+
+.std-city {
+  color: orange;
+}

@@ -5,12 +5,6 @@
   background-color: rgb(3, 3, 104);
 }
 
-.App-Title {
-  color: white;
-  text-align: center;
-}
-
-.App-Desc {
-  color: lightcyan;
-  text-align: center;
+td {
+  border: 2px solid black;
 }

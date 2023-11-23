@@ -1,19 +1,31 @@
 import "./App.css";
+import AppDescription from "./components/AppDescription";
+import AppTitle from "./components/AppTitle";
+import Student from "./components/Student";
 
 function App() {
   return (
     <div className="App-Container">
       <AppTitle />
       <AppDescription />
+      <table>
+        <tr>
+          <td>
+            <Student />
+          </td>
+          <td>
+            <Student />
+          </td>
+          <td>
+            <Student />
+          </td>
+          <td>
+            <Student />
+          </td>
+        </tr>
+      </table>
     </div>
   );
 }
 
-function AppTitle() {
-  return <h1 className="App-Title">RTSoft Website</h1>;
-}
-
-function AppDescription() {
-  return <p className="App-Desc">Understanding the React JS concepts</p>;
-}
 export default App;
