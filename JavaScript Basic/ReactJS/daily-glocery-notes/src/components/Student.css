@@ -1,15 +1,22 @@
 .container {
-  width: 100%;
+  max-width: 300px;
   padding: 5px;
   background-color: white;
+  cursor: pointer;
 }
-
+.container:hover {
+  background-color: rgb(228, 227, 227);
+}
 .id {
   color: rgb(0, 115, 255);
 }
 
 .std-name {
   color: rgb(0, 115, 255);
+}
+
+strong {
+  display: block;
 }
 
 .std-city {

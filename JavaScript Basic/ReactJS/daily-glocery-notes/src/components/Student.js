@@ -1,16 +1,13 @@
 import "./Student.css";
 
-const Student = () => {
-  let stdId = 1022;
-  let stdName = "John Doe";
-  let stdCity = "California";
+const Student = (props) => {
   return (
     <div className="container">
-      <h1>
-        ID : <span className="id">{stdId}</span>
-      </h1>
-      <h1 className="std-name">{stdName}</h1>
-      <h1 className="std-city">{stdCity}</h1>
+      <strong>
+        ID : <span className="id">{props.stdID}</span>
+      </strong>
+      <strong className="std-name">{props.stdName}</strong>
+      <strong className="std-city">{props.stdCity}</strong>
     </div>
   );
 };
