@@ -1,0 +1,229 @@
+import "./App.css";
+import AppDescription from "./components/AppDescription";
+import AppTitle from "./components/AppTitle";
+import Student from "./components/Student";
+
+function App() {
+  let students = [
+    {
+      id: 101,
+      name: "John Doe",
+      city: "California",
+      sts: true,
+    },
+    {
+      id: 102,
+      name: "Arti Nathani",
+      city: "Balaghat",
+      sts: true,
+    },
+    {
+      id: 103,
+      name: "Abhinav Bopche",
+      city: "Goregaon",
+      sts: false,
+    },
+    {
+      id: 104,
+      name: "Sarang Thawkar",
+      city: "Gondia",
+      sts: false,
+    },
+    {
+      id: 105,
+      name: "Dipendra Uikey",
+      city: "Fulchur",
+      sts: true,
+    },
+  ];
+
+  return (
+    <div className="App-Container">
+      <AppTitle siteName="RTSoft" />
+      <AppDescription masterName="Ratnadip T" />
+      <div className="conta">
+        <div className="row">
+          <div className="col">
+            <Student
+              stdID={students[0].id}
+              stdName={students[0].name}
+              stdCity={students[0].city}
+              status={students[0].sts}
+            />
+          </div>
+          <div className="col">
+            <Student
+              stdID={students[1].id}
+              stdName={students[1].name}
+              stdCity={students[1].city}
+              status={students[1].sts}
+            />
+          </div>
+          <div className="col">
+            <Student
+              stdID={students[2].id}
+              stdName={students[2].name}
+              stdCity={students[2].city}
+              status={students[2].sts}
+            />
+          </div>
+          <div className="col">
+            <Student
+              stdID={students[3].id}
+              stdName={students[3].name}
+              stdCity={students[3].city}
+              status={students[3].sts}
+            />
+          </div>
+          <div className="col">
+            <Student
+              stdID={students[4].id}
+              stdName={students[4].name}
+              stdCity={students[4].city}
+              status={students[4].sts}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// product components
+import "./App.css";
+import AppDescription from "./components/AppDescription";
+import AppTitle from "./components/AppTitle";
+import Product from "./components/Product";
+
+function App() {
+  let products = ["Milk", "Paneer", "Table", "Watermelon", "Mango"];
+
+  return (
+    <div className="App-Container">
+      <AppTitle siteName="RTSoft" />
+      <AppDescription masterName="Ratnadip T" />
+
+      <Product productName={products[0]} />
+      <Product productName={products[1]} />
+      <Product productName={products[2]} />
+      <Product productName={products[3]} />
+      <Product productName={products[4]} />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// customer 
+import "./App.css";
+import AppDescription from "./components/AppDescription";
+import AppTitle from "./components/AppTitle";
+import Customer from "./components/Customer";
+
+function App() {
+  let customers = [
+    {
+      aNo: 12465465,
+      cName: "RTSoft Solutions",
+    },
+    {
+      aNo: 14523,
+      cName: "Sarang Thawkar",
+    },
+    {
+      aNo: 5784,
+      cName: "Chirag Sharma",
+    },
+  ];
+  return (
+    <div className="App-Container">
+      <AppTitle siteName="RTSoft" />
+      <AppDescription masterName="Ratnadip T" />
+
+      <Customer accNo={customers[0].aNo} cusName={customers[0].cName} />
+
+      <Customer accNo={customers[1].aNo} cusName={customers[1].cName} />
+
+      <Customer accNo={customers[2].aNo} cusName={customers[2].cName} />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// List rendering - productimport "./App.css";
+import AppDescription from "./components/AppDescription";
+import AppTitle from "./components/AppTitle";
+import Product from "./components/Product";
+
+function App() {
+  let products = [
+    "Milk",
+    "Paneer",
+    "Table",
+    "Watermelon",
+    "Mango",
+    "Orange",
+    "laptop",
+  ];
+  return (
+    <div className="App-Container">
+      <AppTitle siteName="RTSoft" />
+      <AppDescription masterName="Ratnadip T" />
+      {products.map((data) => (
+        <Product productName={data} key={data} />
+      ))}
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// customer list rendering concept
+import "./App.css";
+import AppDescription from "./components/AppDescription";
+import AppTitle from "./components/AppTitle";
+import Customer from "./components/Customer";
+
+function App() {
+  let customers = [
+    {
+      aNo: 12465465,
+      cName: "RTSoft Solutions",
+    },
+    {
+      aNo: 14523,
+      cName: "Sarang Thawkar",
+    },
+    {
+      aNo: 5784,
+      cName: "Chirag Sharma",
+    },
+    {
+      aNo: 4578,
+      cName: "Dipendra Uikey",
+    },
+  ];
+  return (
+    <div className="App-Container">
+      <AppTitle siteName="RTSoft" />
+      <AppDescription masterName="Ratnadip T" />
+
+      {customers.map((cust) => (
+        <Customer accNo={cust.aNo} cusName={cust.cName} key={cust.aNo} />
+      ))}
+    </div>
+  );
+}
+
+export default App;
