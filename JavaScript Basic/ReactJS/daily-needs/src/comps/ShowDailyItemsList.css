@@ -1,0 +1,19 @@
+.list-box {
+  width: 80%;
+  height: 200px;
+  margin: 15px auto;
+  padding: 5px;
+  box-shadow: 0px 0px 10px 5px lightblue;
+  overflow-y: auto;
+}
+
+.list-row {
+  margin-bottom: 2px;
+  border-bottom: 1px solid lightblue;
+  padding: 2px;
+  text-align: left;
+}
+
+.list-item {
+  color: rgb(0, 191, 255);
+}
