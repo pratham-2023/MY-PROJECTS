@@ -1,52 +1,14 @@
 import "./ShowDailyItemsList.css";
-const ShowDailyItemsList = () => {
+const ShowDailyItemsList = (props) => {
   return (
     <div className="list-box">
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
-      <div className="list-row">
-        <strong className="list-item">Buy Panner</strong>
-      </div>
+      {props.itemList.map((item) => {
+        return (
+          <div className="list-row" key={item}>
+            <strong className="list-item">{item}</strong>
+          </div>
+        );
+      })}
     </div>
   );
 };
